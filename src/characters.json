@@ -1,0 +1,110 @@
+
+
+[
+    {
+        "id": 1,
+        "clicked" : false,
+        "name": "Charmander",
+        "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/004.png",
+        "type": "Fire"
+      },
+      {
+        "id": 2,
+        "clicked" : false,
+        "name": "Squirtle",
+        "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/007.png",
+        "type": "Water"
+      },
+      {
+        "id": 3,
+        "clicked" : false,
+        "name": "Butterfree",
+        "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/012.png",
+        "type": "Bug, Flying"
+      },
+      {
+        "id": 4,
+        "clicked" : false,
+        "name": "Pikachu",
+        "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/025.png",
+        "type": "Electric"
+      },
+      {
+        "id": 5,
+        "clicked" : false,
+        "name": "Rattata",
+        "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/019.png",
+        "type": "Normal"
+      },
+      {
+        "id": 6,
+        "clicked" : false,
+        "name": "Ekans",
+        "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/023.png",
+        "type": "Poison"
+      },
+      {
+        "id": 7,
+        "clicked" : false,
+        "name": "Zubat",
+        "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/041.png",
+        "type": "Poison, Flying"
+      },
+      {
+        "id": 8,
+        "clicked" : false,
+        "name": "Bulbasaur",
+        "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png",
+        "type": "Grass, Poison"
+      },
+      {
+        "id": 9,
+        "clicked" : false,
+        "name": "Oddish",
+        "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/043.png",
+        "type": "Grass, Poison"
+      },
+      {
+        "id": 10,
+        "clicked" : false,
+        "name": "Abra",
+        "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/063.png",
+        "type": "Psychic"
+      },
+      {
+        "id": 11,
+        "clicked" : false,
+        "name": "Snorlax",
+        "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/143.png",
+        "type": "Normal"
+      },
+      {
+        "id": 12,
+        "clicked" : false,
+        "name": "Ditto",
+        "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/132.png",
+        "type": "Normal"
+      },
+      {
+        "id": 13,
+        "clicked" : false,
+        "name": "Pidgey",
+        "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/016.png",
+        "type": "Normal, Flying"
+      },
+      {
+        "id": 14,
+        "clicked" : false,
+        "name": "Metapod",
+        "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/011.png",
+        "type": "Bug"
+      },
+      {
+        "id": 15,
+        "clicked" : false,
+        "name": "Jigglypuff",
+        "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/039.png",
+        "type": "Normal, Fairy"
+      }
+]
+

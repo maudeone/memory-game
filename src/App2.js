@@ -1,6 +1,4 @@
-
-
-import React, { Component } from "react";
+import React, { useState } from "react";
 import CharacterCard from "./CharacterCard";
 import Wrapper from "./Wrapper";
 import Navbar from "./Navbar";
@@ -8,53 +6,49 @@ import Jumbotron from "./Jumbotron";
 import characters from "./characters.json";
 import "./App.css";
 
-class App extends Component {
-  state = {
-    characters,
-    highScore: 0,
-    currentScore: 0,
-    Clicked: false
+function App2() {
+    const [characters, setCharacters] = useState([]);
+    const [highScore, setHighScore] = useState(0);
+    const [currentScore, setCurrentScore] = useState(0);
+    const [Clicked, setClicked] = useState(false);
+  
+  const handleClick = id => {
+    shuffleArray();
+    handleScore(id);
   };
 
-  handleClick = id => {
-    this.shuffleArray();
-    this.handleScore(id);
-    console.log(this.state.timesClicked);
-  };
-
-  handleScore = id => {
-    this.state.characters.forEach(element => {
+  const handleScore = id => {
+    characters.forEach(element => {
       if (id === element.id && element.clicked === false) {
         element.clicked = true;
-        this.setState({ Clicked: false });
-        this.handleIncrement();
+        setClicked(false);
+        handleIncrement();
       } else if (id === element.id && element.clicked === true) {
-        if (this.state.currentScore > this.state.highScore) {
-          this.setState({ highScore: this.state.currentScore });
+        if (currentScore > highScore) {
+          setHighScore(currentScore);
         }
-        this.setState({ currentScore: 0 });
-        this.setState({ Clicked: true });
-        this.state.characters.forEach(element => (element.clicked = false));
-        console.log(this.state.characters);
+        setCurrentScore(0);
+        setClicked(true);
+        characters.forEach(element => (element.clicked = false));
       }
     });
   };
 
-  shuffleArray = () => {
+  const shuffleArray = () => {
     // Shuffle array of objects
-    const shuffledArr = this.shuffle(this.state.characters);
+    const shuffledArr = shuffle(characters);
     // Setting 'shuffledArr' as the new state
-    this.setState({ shuffledArr });
+    setCharacters({ shuffledArr });
   };
 
   // handleIncrement increments this.state.currentScore by 1
-  handleIncrement = () => {
+  const handleIncrement = () => {
     // Using setState method to update component's state
-    this.setState({ currentScore: this.state.currentScore + 1 });
+    setCurrentScore(currentScore + 1);
   };
 
   // Function that takes an array as a parameter and shuffles it
-  shuffle = array => {
+  const shuffle = array => {
     var currentIndex = array.length,
       temporaryValue,
       randomIndex;
@@ -73,28 +67,26 @@ class App extends Component {
     return array;
   };
 
-  render() {
     return (
       <Wrapper>
         <Navbar
-          currentScore={this.state.currentScore}
-          highScore={this.state.highScore}
+          currentScore={currentScore}
+          highScore={highScore}
         />
         <Jumbotron />
-        {this.state.characters.map(character => (
+        {characters.map(character => (
           <CharacterCard
-            Clicked={this.state.Clicked}
-            handleClick={this.handleClick}
+            Clicked={Clicked}
+            handleClick={handleClick}
             id={character.id}
             key={character.id}
             name={character.name}
             image={character.image}
-            type={character.type}
+            occupation={character.occupation}
           />
         ))}
       </Wrapper>
     );
-  }
 }
 
-export default App;
+export default App2;
